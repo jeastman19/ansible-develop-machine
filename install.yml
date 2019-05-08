@@ -1,0 +1,10 @@
+---
+
+- name: Aprovisionamiento de la máquina de desarrollo
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  roles:
+    - commons
+
+

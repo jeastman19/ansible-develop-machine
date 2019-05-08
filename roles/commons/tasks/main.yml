@@ -1,0 +1,13 @@
+---
+  - name: Instalar tree
+    apt:
+        name: tree
+        update_cache: yes
+        state: latest
+
+  - name: Instalar git
+    apt:
+      name: git
+      update_cache: yes
+      state: latest
+
