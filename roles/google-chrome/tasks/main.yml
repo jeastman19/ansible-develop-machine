@@ -1,0 +1,17 @@
+---
+- name: asegurar que la clave de firma este presente
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    state: present
+
+- name: asegurar que el repositorio de Google chrome esté presente
+  apt_repository:
+    repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+    filename: "google-chrome"
+    state: present
+    update_cache: yes
+
+- name: "apt | ensure Google chrome present"
+  apt:
+    name: "{{ chrome_package }}"
+    state: present
