@@ -11,3 +11,9 @@
       update_cache: yes
       state: latest
 
+  - name: Instalar curl
+    apt:
+      name: curl
+      update_cache: yes
+      state: latest
+
