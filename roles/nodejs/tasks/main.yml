@@ -1,0 +1,6 @@
+---
+
+- name: Instalar nodejs
+  apt:
+    name: nodejs
+    state: absent

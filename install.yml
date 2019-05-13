@@ -7,5 +7,5 @@
   roles:
     - commons
     - google-chrome
-
-
+    - nodejs
+    - sublime-text
