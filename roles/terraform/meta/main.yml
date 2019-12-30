@@ -1,0 +1,24 @@
+galaxy_info:
+  author: Jorge Eastman <jeastman19@gmail.com>
+  description: your description
+  company: Consultor IT Freelance
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: GenericUNIX
+      versions:
+        - all
+  categories:
+  - cloud
+dependencies: []
