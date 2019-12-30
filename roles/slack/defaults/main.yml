@@ -1,0 +1,4 @@
+---
+# defaults file for roles/slack
+
+slack_version: 4.2.0
