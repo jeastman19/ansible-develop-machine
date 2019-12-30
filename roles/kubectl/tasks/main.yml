@@ -1,0 +1,17 @@
+---
+
+- name: Agregar la apt-key de kubernetes
+  apt_key:
+    url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
+    state: present
+
+- name: Agregar el repositorio apt
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Instalar kubectl
+  apt:
+    name: kubectl
+    state: present
+    update_cache: yes
