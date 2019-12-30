@@ -19,6 +19,6 @@
 
 - name: Install packages
   apt:
-    state: installed
+    state: present
     pkg: "sublime-text"
     update_cache: yes
