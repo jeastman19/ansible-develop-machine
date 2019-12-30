@@ -1,17 +1,10 @@
 ---
-# - name: Create terraform user
-#   user:
-#     name: "{{terraform_user}}"
-#     password: "{{terraform_user_password}}"
-
 - name: Create Terraform directory
   file:
     path: "{{terraform_dir}}"
     state: directory
     owner: "root"
     group: "root"
-    # owner: "{{terraform_user}}"
-    # group: "{{terraform_user}}"
   register: terraform_directory
 
 - name: Check terraform version
@@ -34,14 +27,6 @@
     dest: "{{terraform_dir}}"
     copy: no
   when: terraform_versions_match.rc != 0 or terraform_directory is changed
-
-# - name: Make terraform_user terraform directory owner
-#   file:
-#     path: "{{terraform_dir}}"
-#     state: directory
-#     owner: "{{terraform_user}}"
-#     group: "{{terraform_user}}"
-#     recurse: yes
 
 - name: Adding terraform command to user path
   file: 
