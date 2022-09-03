@@ -19,3 +19,5 @@
 * Visual Studio Code
 * rustc
 * golang
+* Calibre
+* Opera (browser)
