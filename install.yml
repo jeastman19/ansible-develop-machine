@@ -9,7 +9,7 @@
     # - google-chrome
     # - nodejs
     # - visual-studio-code
-    # - tilix
+    - tilix
     # - terraform
     # - kubectl
     # - slack
