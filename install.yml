@@ -6,11 +6,10 @@
   become: yes
   roles:
     - commons
-    - google-chrome
-    - nodejs
-    - sublime-text
-    - visual-studio-code
-    - tilix
-    - terraform
-    - kubectl
-    - slack
+    # - google-chrome
+    # - nodejs
+    # - visual-studio-code
+    # - tilix
+    # - terraform
+    # - kubectl
+    # - slack
