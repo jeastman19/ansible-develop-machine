@@ -8,7 +8,7 @@
     - commons
     - google-chrome
     # - nodejs
-    # - visual-studio-code
+    - visual-studio-code
     - tilix
     # - terraform
     # - kubectl
