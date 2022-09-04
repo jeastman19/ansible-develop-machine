@@ -4,9 +4,7 @@
 
 # Instalar
 
-- google-chrome
 - terraform
-- visual-studio-code
 * aws
 * kubectl
 * minikube

@@ -10,7 +10,7 @@
     # - nodejs
     - visual-studio-code
     - tilix
-    # - terraform
+    - terraform
     # - kubectl
     - slack
     # - opera
