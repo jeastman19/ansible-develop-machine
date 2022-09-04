@@ -17,3 +17,9 @@
       update_cache: yes
       state: latest
 
+  - name: Instalar wget
+    apt:
+      name: wget
+      update_cache: yes
+      state: latest
+

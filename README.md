@@ -5,9 +5,7 @@
 # Instalar
 
 - google-chrome
-- slack
 - terraform
-- tilix
 - visual-studio-code
 * aws
 * kubectl
@@ -21,3 +19,4 @@
 * golang
 * Calibre
 * Opera (browser)
+* Chromium
