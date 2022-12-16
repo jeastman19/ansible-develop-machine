@@ -17,6 +17,8 @@
 * Opera (browser)
 * Chromium
 
+Cortafuego con UFW, bloquear todo
+
 ## Requisitos
 
 * pip3

@@ -1,0 +1,5 @@
+---
+- name: Install Pavucontrol
+  apt:
+    name: pavucontrol
+    state: present
