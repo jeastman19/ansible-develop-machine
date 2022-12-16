@@ -1,10 +1,8 @@
 # Playbook de Ansible para el aprovicionamiento de la maquina empleada para el desarrollo
 
+## Instala
 
-
-# Instalar
-
-- terraform
+* terraform
 * aws
 * kubectl
 * minikube
@@ -18,3 +16,23 @@
 * Calibre
 * Opera (browser)
 * Chromium
+
+## Requisitos
+
+* pip3
+
+## Uso
+
+### Clonar el repositorio
+
+```bash
+git clone git@github.com:jeastman19/ansible-develop-machine.git
+```
+
+### Ejecutar
+
+Para ejecutar el playbook, se debe ejecutar el script ***install.sh***. que está en éste directorio, el cual se encargará de ejecutar el playbook de Ansible.
+
+```bash
+./install.sh
+```

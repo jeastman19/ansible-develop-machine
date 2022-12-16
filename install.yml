@@ -6,11 +6,5 @@
   become: yes
   roles:
     - commons
-    - google-chrome
-    # - nodejs
-    - visual-studio-code
-    - tilix
-    - terraform
-    # - kubectl
-    - slack
-    # - opera
+    - aws
+    - docker

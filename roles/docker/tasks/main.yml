@@ -1,0 +1,46 @@
+---
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker apt repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+    state: latest
+
+- name: Install Docker Compose
+  pip:
+    name: docker-compose
+    state: latest
+
+- name: Create docker group
+  group:
+    name: docker
+    state: present
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    append: yes
+
+- name: Check if Docker socket exists
+  stat:
+    path: /var/run/docker.sock
+  register: docker_socket
+
+- name: Set ACL for Docker socket
+  command: setfacl -m user:{{ ansible_user_id }}:rw /var/run/docker.sock
+  when: docker_socket.stat.exists == False
+  
+- name: Restart Docker daemon
+  systemd:
+    name: docker
+    state: restarted

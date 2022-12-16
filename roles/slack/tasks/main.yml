@@ -1,8 +1,0 @@
----
-# tasks file for roles/slack
-
-- name: Instalar slack
-  apt:
-    name: slack-desktop
-    update_cache: yes
-    state: latest
