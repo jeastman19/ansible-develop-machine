@@ -1,25 +1,31 @@
 ---
-  - name: Instalar tree
-    apt:
-        name: tree
-        update_cache: yes
-        state: latest
+- name: Add /usr/bin to PATH
+  lineinfile:
+    path: /etc/environment
+    regexp: '^PATH='
+    line: 'PATH="/usr/bin:$PATH"'
+    state: present
 
-  - name: Instalar git
-    apt:
-      name: git
+- name: Instalar tree
+  apt:
+      name: tree
       update_cache: yes
       state: latest
 
-  - name: Instalar curl
-    apt:
-      name: curl
-      update_cache: yes
-      state: latest
+- name: Instalar git
+  apt:
+    name: git
+    update_cache: yes
+    state: latest
 
-  - name: Instalar wget
-    apt:
-      name: wget
-      update_cache: yes
-      state: latest
+- name: Instalar curl
+  apt:
+    name: curl
+    update_cache: yes
+    state: latest
 
+- name: Instalar wget
+  apt:
+    name: wget
+    update_cache: yes
+    state: latest

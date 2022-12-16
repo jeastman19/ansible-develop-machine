@@ -9,3 +9,4 @@
     - aws
     - pavucontrol
     - docker
+    - minikube
